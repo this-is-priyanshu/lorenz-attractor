@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.26.1.min.js"></script>
+    <title>Lorenz Attractor</title>
+</head>
+<body>
+    <div id="container">
+        <h2>Lorenz Attractor</h2>
+        <hr>
+        <p>System of equations:</p>
+        <p>\( \frac{dx}{dt} = σ(y - x)\)</p>
+        <p>\( \frac{dy}{dt} = x(ρ - z) - y\)</p>
+        <p>\( \frac{dz}{dt} = xy - βz \)</p>
+        <p>where \( {x} \), \( {y} \), \( {z} \) are the state variables and \( {σ} \), \( {ρ} \), \( {β} \) are constants.</p>
+        <hr>
+        <div id="graph"></div>
+        <div id="slider-container">
+            <div class="form-group">
+                <label for="slider-sigma">Adjust \( {σ} \):</label>
+                <input type="range" id="slider-sigma" min="1" max="100" value="10">
+                <span id="slider-sigma-value">10</span>
+            </div>
+            <div class="form-group">
+                <label for="slider-rho">Adjust \( {ρ} \):</label>
+                <input type="range" id="slider-rho" min="1" max="100" value="28">
+                <span id="slider-rho-value">28</span>
+            </div>
+            <div class="form-group">
+                <label for="slider-beta">Adjust \( {β} \):</label>
+                <input type="range" id="slider-beta" min="0.001" max="10" step="0.001" value="2.667">
+                <span id="slider-beta-value">2.667</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
